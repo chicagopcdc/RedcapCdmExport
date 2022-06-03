@@ -12,7 +12,7 @@ df = pd.DataFrame(data=data)
 df_dob=df[~df['dob'].isnull()]['dob']
 df_out = pd.DataFrame()
 
-meds_list = ['CYCLOPHOSPHAMIDE','TOPOTECAN','ETOPOSIDE','CISPLATIN','DOXORUBICIN','VINCRISTINE','MESNA','BUSULFAN','MELPHALAN','FILGRASTIM','CARBOPLATIN','ISOTRETINOIN']
+meds_list = ['CYCLOPHOSPHAMIDE','TOPOTECAN','ETOPOSIDE','CISPLATIN','DOXORUBICIN','VINCRISTINE','MESNA','BUSULFAN','MELPHALAN','FILGRASTIM','CARBOPLATIN','ISOTRETINOIN','DINUTUXIMAB','SARGRAMOSTIM','ALDESLEUKIN','ISOTRETINOIN']
 
 for med in meds_list:
     df_out=df_out.append(df[df["medication_label"].str.contains(med)==True])
