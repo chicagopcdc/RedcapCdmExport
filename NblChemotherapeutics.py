@@ -6,7 +6,7 @@ import ExportSettings as es
 ### list of fields to export from REDCap CDM
 fields_to_export=['record_id','dob','medication_label','medication_date','medication_dosage','medication_status','cog_id']
 ### list of medication names to export from REDCap CDM
-meds_list = ['CYCLOPHOSPHAMIDE','TOPOTECAN','ETOPOSIDE','CISPLATIN','DOXORUBICIN','VINCRISTINE','MESNA','BUSULFAN','MELPHALAN','FILGRASTIM','CARBOPLATIN','ISOTRETINOIN','DINUTUXIMAB','SARGRAMOSTIM','ALDESLEUKIN','ISOTRETINOIN']
+meds_list = es.meds_list
 ### list of medication statuses to export from REDCap CDM
 statuses_to_export=['completed']
 

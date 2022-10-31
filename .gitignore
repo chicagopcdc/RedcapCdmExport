@@ -3,3 +3,4 @@ __pycache__
 ExportSettings.py
 *.csv
 *.json
+*.xlsx
