@@ -2,3 +2,4 @@ api_url = 'https://redcap.example.edu/api/'
 api_key = 'MySecretApiKey'
 csv_out = './sample_out.csv'
 meds_list = ['CYCLOPHOSPHAMIDE','TOPOTECAN','ETOPOSIDE','CISPLATIN','DOXORUBICIN','VINCRISTINE','BUSULFAN','MELPHALAN','CARBOPLATIN','ISOTRETINOIN','DINUTUXIMAB','SARGRAMOSTIM','ALDESLEUKIN','IRINOTECAN','TEMOZOLOMIDE','THIOTEPA','IOBENGUANE']
+statuses_to_export = ['active','completed']

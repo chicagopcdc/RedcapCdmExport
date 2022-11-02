@@ -8,7 +8,7 @@ fields_to_export=['record_id','dob','medication_label','medication_date','medica
 ### list of medication names to export from REDCap CDM
 meds_list = es.meds_list
 ### list of medication statuses to export from REDCap CDM
-statuses_to_export=['completed']
+statuses_to_export=es.statuses_to_export
 
 ### set up REDCap connection and export data to a Pandas dataframe
 project = Project(es.api_url, es.api_key)
@@ -24,7 +24,7 @@ df_cog=df[~df['cog_id'].isnull()]['cog_id']
 ### populate an output dataframe with the records that have the medication name and statuses of interest
 df_out = pd.DataFrame()
 for med in meds_list:
-    df_out=df_out.append(df[(df["medication_label"].str.contains(med)==True) & (df["medication_status"].isin(statuses_to_export))])
+    df_out=pd.concat([df_out,df[(df["medication_label"].str.contains(med)==True) & (df["medication_status"].isin(statuses_to_export))]])
 df_out = df_out.drop(columns=['dob'])
 df_out = df_out.drop(columns=['cog_id'])
 df_out = df_out.join(df_dob)
