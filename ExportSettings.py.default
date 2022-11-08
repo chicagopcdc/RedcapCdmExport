@@ -1,5 +1,36 @@
 api_url = 'https://redcap.example.edu/api/'
 api_key = 'MySecretApiKey'
 csv_out = './sample_out.csv'
-meds_list = ['CYCLOPHOSPHAMIDE','TOPOTECAN','ETOPOSIDE','CISPLATIN','DOXORUBICIN','VINCRISTINE','BUSULFAN','MELPHALAN','CARBOPLATIN','ISOTRETINOIN','DINUTUXIMAB','SARGRAMOSTIM','ALDESLEUKIN','IRINOTECAN','TEMOZOLOMIDE','THIOTEPA','IOBENGUANE']
-statuses_to_export = ['active','completed']
+rc_meds_to_export = [
+    'CYCLOPHOSPHAMIDE',
+    'TOPOTECAN',
+    'ETOPOSIDE',
+    'CISPLATIN',
+    'DOXORUBICIN',
+    'VINCRISTINE',
+    'BUSULFAN',
+    'MELPHALAN',
+    'CARBOPLATIN',
+    'ISOTRETINOIN',
+    'DINUTUXIMAB',
+    'SARGRAMOSTIM',
+    'ALDESLEUKIN',
+    'ALDESLUEKIN',
+    'IRINOTECAN',
+    'TEMOZOLOMIDE',
+    'THIOTEPA',
+    'IOBENGUANE',
+    'ACCUTANE'
+    ]
+rc_statuses_to_export = [
+    'completed',
+    'stopped'
+    ]
+rc_fields_to_export = [
+    'record_id',
+    'dob',
+    'medication_label',
+    'medication_date',
+    'medication_dosage',
+    'medication_status',
+    ]
