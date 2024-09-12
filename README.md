@@ -1,6 +1,7 @@
 # RedcapCdmExport
 
-PyCap is required to run this export as is Pandas.  
+PyCap and Pandas are required to run this export.
+  
 To install PyCap, execute the following:
 
     pip install PyCap 
