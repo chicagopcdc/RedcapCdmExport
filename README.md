@@ -1,8 +1,13 @@
 # RedcapCdmExport
 
-PyCap is required to run this export.  To install PyCap, execute the following:
+PyCap is required to run this export as is Pandas.  
+To install PyCap, execute the following:
 
     pip install PyCap 
+
+To install Pandas, execute the following:
+
+    pip install Pandas 
 
 Local settings need to be specified in an `ExportSettings.py` file before running the program.  An example file is provided (`ExportSettings.py.default`) that can be used as a template.
 

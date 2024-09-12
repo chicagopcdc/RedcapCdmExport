@@ -4,3 +4,8 @@ ExportSettings.py
 *.csv
 *.json
 *.xlsx
+
+pyvenv.cfg
+bin/*
+include/*
+lib/*
