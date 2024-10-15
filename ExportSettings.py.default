@@ -1,10 +1,13 @@
 api_url = 'https://redcap.example.edu/api/'
 api_key = 'MySecretApiKey'
-csv_out = './treatment_data.csv'
-mapping_file_out = './identity_mapping.csv'
+cog_id_mapping_file_out = './identity_mapping.csv'
+usi_mapping_file_in = './anonymous_id_to_usi.csv'
+treatment_file_out = './treatment_data.csv'
+usi_bound_treatment_file_out = './usi_bound_treatment_data.csv'
 
 rc_anonymized_id_field = 'anonymized_id'
 rc_cog_id_field = 'cog_id'
+usi_field = 'USI_PatientID'
 
 rc_meds_to_export = [
     'CYCLOPHOSPHAMIDE',
