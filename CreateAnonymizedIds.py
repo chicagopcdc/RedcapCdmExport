@@ -23,10 +23,11 @@ def main():
 
         if (len(df_null_anonymized_id.index) > 0):
             ### create anonymized ids
-            df_null_anonymized_id[es.rc_anonymized_id_field] = [uuid.uuid4() for _ in range(len(df_null_anonymized_id.index))]
+            df_null_anonymized_id = df_null_anonymized_id.astype({es.rc_anonymized_id_field:str})
+            df_null_anonymized_id.loc[:, (es.rc_anonymized_id_field)] = [uuid.uuid4() for _ in range(len(df_null_anonymized_id.index))]
             
             ### import anonymized ids to REDCap
-            import_count = project.import_records(import_format="df", to_import=df)
+            import_count = project.import_records(import_format="df", to_import=df_null_anonymized_id)
             print(str(import_count) + " records with previously unassigned anonymous ids found.")
         else:
             print("No records with previously unassigned anonymous ids (i.e. " + es.rc_anonymized_id_field + ") found.")
