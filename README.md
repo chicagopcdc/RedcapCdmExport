@@ -13,7 +13,7 @@ The code expects a REDCap CDM project (configured to extract DOB, and medication
 1. `CreateAnonymizedIds.py`
 2. `NblChemotherapeutics.py`
 
-The first script performs two tasks.  First, it generates UUIDs and imports these into REDCap in the `anonymized_id` field.  Each time the script is run, `anonymized_id` values will be created and written to REDCap for any records where `anonymized_id` has a null value.  Second, the script outputs an identity mapping file containing two fields: `anonymized_id` and `cog_id`.  This mapping file may then be used to support honest brokering through the COG who can lookup USI values from the `cog_id` values and produce a separate mapping file with `anonymized_id` and USI values that are suitable for linking data sets.
+The first script performs two tasks.  First, it generates UUIDs and imports these into REDCap in the `anonymized_id` field.  Each time the script is run, `anonymized_id` values will be created and written to REDCap for any records where `anonymized_id` has a null value.  Second, the script outputs an identity mapping file containing two fields: `anonymized_id` and `cog_id`.  This mapping file may then be used to support honest brokering through a) the COG Statistical Center who can lookup USI values from the `cog_id` values and produce a separate mapping file with `anonymized_id` and USI values that are suitable for linking data sets, or b) the CCDI Participant Index service which can be used to return USI values in response to queries with `anonymized_id` values.
 
 The second script outputs a de-identified csv treatment file containing anonymized_id, the name of the medication ordered, the order status, and the age in days when the order was placed.
 
