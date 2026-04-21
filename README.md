@@ -8,7 +8,7 @@ To install all requirements using pip run the following command:
 
 Local settings need to be specified in an `ExportSettings.py` file before running the program.  An example file is provided (`ExportSettings.py.default`) that can be used as a template.
 
-The code expects a REDCap CDM project (configured to extract DOB, and medications) with an additional data collection instrument for handling identity mapping (with two identity fields: `cog_id` and `anonymized_id`). There are two scripts that must be run in sequential order:
+The code expects a REDCap CDM project (configured to extract DOB, and medications) with an additional data collection instrument for handling identity mapping (with two identity fields: `cog_id` and `anonymized_id`). The `cog_id` field must be manually populated from a local resource (e.g., a clinical trials management system) that maintains the association between patient identifiers (e.g., MRN) and research participant identifiers (e.g., COG ID). Once the `cog_id` has been manually populated, there are two scripts that must be run in sequential order:
 
 1. `CreateAnonymizedIds.py`
 2. `NblChemotherapeutics.py`
